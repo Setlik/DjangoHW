@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Каталог</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<!--    <link rel="stylesheet" href="C:\lessons\DjangoHW\DjangoHW\css">-->
+</head>
+<style>
+    html, body {
+        height: 100%;
+    }
+    .full-height {
+        height: 100%;
+    }
+    .user-photo {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            display: inline-block;
+        }
+        .user-photo img {
+            width: 100%;
+            height: auto;
+        }
+        .dropdown-menu {
+            background-color: #343a40;
+            border: none;
+            position: absolute;
+            display: none;
+            z-index: 1000;
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .dropdown-item {
+            color: #ffffff;
+        }
+        .dropdown-item:hover {
+            background-color: #50575d;
+        }
+        .dropdown-item:focus,
+        .dropdown-item.active {
+            background-color: #50575d;
+        }
+</style>
+<body>
+<div class="row full-height align-items-start">
+    <div class="col-2 full-height">
+        <nav class="bg-dark text-white p-3 full-height">
+            <ul class="nav flex-column">
+                <div class="container-fluid">
+                    <a href="#" class="navbar-brand">
+                        <img src="data/bootstrap-logo-white.svg" alt="Logo" width="30" height="24"
+                             class="d-inline-block align-text-top"> Меню
+                    </a>
+                    <hr>
+                </div>
+                <li class="nav-item"><a class="nav-link text-white" href="index.html"><img src="data/devices.svg"
+                                                                                           style="filter: brightness(0) invert(1);"
+                                                                                           alt="Logo" width="30"
+                                                                                           height="24"> Главная</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="categories.html"><img
+                        src="data/multi-select.svg" style="filter: brightness(0) invert(1);" alt="Logo" width="30"
+                        height="24"> Категории</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="catalog.html"><img src="data/paste.svg"
+                                                                                             style="filter: brightness(0) invert(1);"
+                                                                                             alt="Logo" width="30"
+                                                                                             height="24"> Заказы</a>
+                </li>
+                <li class="nav-item"><a class="nav-link text-white" href="contacts.html"><img src="data/people.svg"
+                                                                                              style="filter: brightness(0) invert(1);"
+                                                                                              alt="Logo" width="30"
+                                                                                              height="24"> Контакты</a>
+                </li>
+            </ul>
+            <hr>
+            <ul class="nav flex-column mt-5">
+                <hr>
+                <li class="nav-item dropdown">
+                    <a class="nav-link text-white" href="#" id="userDropdown" role="button">
+                        <div class="user-photo">
+                            <img src="data/userphoto.jpg" alt="User Photo">
+                        </div>
+                        Пользователь
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                        <li><a class="dropdown-item" href="profile.html">Профиль</a></li>
+                        <li><a class="dropdown-item" href="escape.html">Выход</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="col-10 text-center">
+        <div class="container p-4">
+            <h1>Каталог</h1>
+            <div class="row mt-5">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title bg-body-tertiary">Товар 1</h5>
+                            <p class="card-text">Цена: 170р<br>Сосисочки</p>
+                            <a href="#" class="btn btn-primary text-primary bg-body" style="width: 100%;">Купить</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title bg-body-tertiary">Товар 2</h5>
+                            <p class="card-text">Цена: 40р<br>Картоха</p>
+                            <a href="#" class="btn btn-primary text-primary bg-body" style="width: 100%;">Купить</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title bg-body-tertiary">Товар 3</h5>
+                            <p class="card-text">Цена: 60р<br>Самогон</p>
+                            <a href="#" class="btn btn-primary text-primary bg-body" style="width: 100%;">Купить</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title  bg-body-tertiary">Товар 4</h5>
+                            <p class="card-text">Цена: 200р<br>курица</p>
+                            <a href="#" class="btn btn-primary text-primary bg-body" style="width: 100%;">Купить</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title  bg-body-tertiary">Товар 5</h5>
+                            <p class="card-text">Цена: 150р<br>сало</p>
+                            <a href="#" class="btn btn-primary text-primary bg-body" style="width: 100%;">Купить</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title bg-body-tertiary">Товар 6</h5>
+                            <p class="card-text">Цена: 80р<br>пиво</p>
+                            <a href="#" class="btn btn-primary text-primary bg-body" style="width: 100%;">Купить</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
